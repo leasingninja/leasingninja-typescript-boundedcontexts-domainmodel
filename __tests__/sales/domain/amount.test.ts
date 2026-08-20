@@ -12,7 +12,7 @@ test("givenTwoEqualAmounts whenEquals thenAreEqual", () => {
     const are_equal = amount1.equals(amount2);
 
     // then
-    expect(are_equal).toBeTruthy;
+    expect(are_equal).toBeTruthy();
 });
 
 test("givenTwoUnequalAmounts_whenEquals_thenAreNotEqual", () => {
@@ -48,7 +48,7 @@ test("givenTwoAmountsWithRoundingAfterThePoint_whenEquals_thenAreEqual", () => {
     const areEqual = amount1.equals(amount2);
 
     // then
-    expect(areEqual).toBeTruthy;
+    expect(areEqual).toBeTruthy();
 });
 
 test("givenAnAmountsWithCents_whenToString_thenAfterThePointIsCorrectlyPrinted", () => {
@@ -71,6 +71,6 @@ test("givenTwoAmountsOfEurosAndCents_whenEquals_thenAreEqual", () => {
     const areEqual = amount1.equals(amount2);
 
     // then
-    expect(areEqual).toBeTruthy;
+    expect(areEqual).toBeTruthy();
 });
 
