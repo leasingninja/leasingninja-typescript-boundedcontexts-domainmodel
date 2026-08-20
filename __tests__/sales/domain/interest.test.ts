@@ -19,7 +19,7 @@ test("givenTwoEqualInterests whenEquals thenAreEqual", () => {
     const Interest2 = Interest.of(4.2);
 
     // when
-    const are_equal = Interest1 == Interest2;
+    const are_equal = Interest1.equals(Interest2);
 
     // then
     expect(are_equal).toBe(true);
@@ -32,7 +32,7 @@ test("givenTwoUnequalInterests_whenEquals_thenAreNotEqual", () => {
     const Interest2 = Interest.of(2.3);
 
     // when
-    const areEqual = Interest1 == Interest2;
+    const areEqual = Interest1.equals(Interest2);
 
     // then
     expect(areEqual).toBeFalsy();

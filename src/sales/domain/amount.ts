@@ -17,7 +17,7 @@ export class Amount {
 
     get amount(): number {return this.amountInCents / 100.0;}
 
-    equals(other: any) {
+    equals(other: Amount) {
         return this.amountInCents === other.amountInCents && this.currency === other.currency;
     }
 
