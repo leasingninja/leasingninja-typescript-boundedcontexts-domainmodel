@@ -1,0 +1,27 @@
+name: LeasingNinja in TypeScript – CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-26.04
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: '26'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck with tsc
+        run: npm run typecheck
+
+      - name: Test with Vitest
+        run: npm test
