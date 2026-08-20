@@ -10,4 +10,9 @@ export class LeaseTerm {
     public static ofYears(noOfYears: number) {
         return new LeaseTerm(noOfYears * 12);
     }
+
+    toString() {
+        return `${this.noOfMonths} months`;
+    }
+
 }

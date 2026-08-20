@@ -1,10 +1,15 @@
 export class Customer {
 
     private constructor(
-        public readonly customer: String
+        public readonly customer: string
     ) {}
 
-    static of(customer: String) {
+    static of(customer: string) {
         return new Customer(customer);
     }
+
+    toString() {
+        return this.customer;
+    }
+
 }
